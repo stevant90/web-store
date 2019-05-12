@@ -1,0 +1,119 @@
+.Card {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: 2px 2px 3px -3px rgba(0,0,0,0.75);
+
+    @media(min-width: 768px) {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+
+    @media(min-width: 1024px) {
+        width: calc(33% - 20px);
+    }
+
+    @media(min-width: 1366px) {
+        width: calc(25% - 20px);
+    }
+}
+
+.Card__content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 60px);
+    box-sizing: border-box;
+    padding: 15px 20px 20px; 
+
+    @media(min-width: 1366px) {
+        height: calc(100% - 62px);        
+    }
+
+    @media(min-width: 1920px) {
+        height: calc(100% - 67px);        
+    }
+}
+
+.Card__title { 
+    padding: 20px 0; 
+    border-bottom: 2px solid $primary-gray; 
+    &--selected { 
+        background-color: $secondary-blue; 
+        color: $primary-blue; 
+        .Card__template-title { color: inherit; }
+    }
+
+    @media(min-width: 1366px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 1920px) {
+        font-size: 25px;
+    }
+}
+
+.Card__template-title { color: rgba($secondary-gray, .6); }
+
+.Card__description { 
+    margin-bottom: 20px; 
+    line-height: 20px; 
+    color: $secondary-gray; 
+
+    @media(min-width: 1366px) {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    @media(min-width: 1920px) {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.Card__features li { 
+    margin-bottom: 10px; 
+
+    @media(min-width: 1366px) {
+        font-size: 17px;
+    }
+
+    @media(min-width: 1920px) {
+        font-size: 20px;
+    }
+}
+
+.Card__price { 
+    margin-top: 30px; 
+    font-size: 18px; 
+    font-weight: bold;
+    
+    @media(min-width: 1366px) {
+        font-size: 20px;
+    }
+
+    @media(min-width: 1920px) {
+        font-size: 25px;
+    }
+}
+
+.Card__btn-wrapper { 
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 30px;
+}
+
+.Card__btn { 
+    min-width: 50%;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 30px;
+    border: 2px solid $primary-gray; 
+    font-weight: bold;
+    outline: none;
+    background-color: transparent;
+    &--selected { background-color: $primary-green; color: $white; pointer-events: none; }
+
+    i { margin-left: 10px; }
+}

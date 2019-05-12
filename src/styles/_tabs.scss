@@ -1,0 +1,36 @@
+.Tabs { 
+    display: flex; 
+    justify-content: space-around; 
+    margin-bottom: 30px; 
+    border-bottom: 2px solid #e8e8e8e0;
+
+    @media(min-width: 768px) {
+        justify-content: flex-start;
+        margin-bottom: 60px;
+        margin-right: 20px;
+    }
+}
+
+.Tabs__item { 
+    color: $secondary-gray; 
+    font-weight: bold; 
+    padding-bottom: 10px;
+    &.active { 
+        color: $primary-blue; 
+        border-bottom: 3px solid $primary-blue; 
+        outline: 0; 
+        pointer-events: none; 
+    } 
+    
+    @media(min-width: 768px) {
+        &:not(:first-child) { margin-left: 30px; }
+    }
+
+    @media(min-width: 1024px) {
+        font-size: 18px;
+    }
+
+    @media(min-width: 1366px) {
+        font-size: 20px;
+    }
+}

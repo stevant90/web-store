@@ -1,0 +1,75 @@
+.AppContainer {
+    background-color: $primary-gray;
+    padding: 20px;
+    height: 100%;
+    &--fixed { position: fixed; }
+
+    @media(min-width: 768px) {
+        padding-right: 0;
+    }
+
+    @media(min-width: 1024px) {
+        padding: 30px;
+        padding-right: 10px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.AppContainer__title {
+    font-size: 22px;
+    margin-bottom: 40px;
+
+    @media(min-width: 768px) {
+        text-align: left;
+    }
+
+    @media(min-width: 1024px) {
+        font-size: 25px;
+        margin-bottom: 60px;
+    }
+    
+    @media(min-width: 1366px) {
+        font-size: 35px;
+    }
+}
+
+.AppContiner__main {
+    @media(min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.AppContainer__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+    a { margin-left: 20px; color: $primary-blue; }
+}
+
+.AppContainer__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: $primary-green;
+    color: $white;
+    &--disabled { pointer-events: none; opacity: .5; }
+
+    i { margin-left: 15px; }
+
+    @media(min-width: 1024px) {
+        width: 150px
+    }
+}
+
